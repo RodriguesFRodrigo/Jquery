@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selectors</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnClick").click(function () {
+                console.log("Submit form...");
+                // ----- :input seleciona todos os inputs do formulário -----
+                console.log("There are " + $(":input").length + " inputs in this webpage.");
+
+                // ----- :text seleciona todos os elementos com type text -----
+                console.log("There are " + $(":text").length + " text inputs in this webpage.");
+
+                // ----- :password seleciona todos os elementos com type password -----
+                console.log("There are " + $(":password").length + " password inputs in this webpage.");
+
+                // ----- :radio seleciona todos os elementos com type radio -----
+                console.log("There are " + $(":radio").length + " radio inputs in this webpage.");
+
+                // ----- :checkbox seleciona todos os elementos com type checkbox -----
+                console.log("There are " + $(":checkbox").length + " checkbox inputs in this webpage.");
+
+                // ----- :file seleciona todos os elementos com type file -----
+                console.log("There are " + $(":file").length + " file inputs in this webpage.");
+
+                // ----- :image seleciona todos os elementos com type image -----
+                console.log("There are " + $(":image").length + " image inputs in this webpage.");
+
+                // ----- :reset seleciona todos os elementos com type reset -----
+                console.log("There are " + $(":reset").length + " reset inputs in this webpage.");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <label for="name">Name:</label>
+    <input type="text" id="user" /><br />
+    <label for="uName">User Name:</label>
+    <input type="text" id="uName" hidden /><br />
+    <label for="pwd"></label>
+    <input type="password" id="pwd" /><br />
+    <label for="gender">Gender:</label>
+    <input type="radio" name="sex" value="m" checked>Male
+    <input type="radio" name="sex" value="f">Female<br />
+    <label for="appliances">Home appliances you own:</label><br />
+    <select name="appliances" multiple="multiple">
+        <option selected>Refrigerator</option>
+        <option>Washing Machine</option>
+        <option>Microwave Oven</option>
+    </select><br />
+    <label for="flower">Which flower you like?</label>
+    <input type="checkbox" name="flower" value="dahlia">Dahlia
+    <input type="checkbox" name="flower" value="tulips" checked>Tulips<br />
+    <input type="image" src="flower1.jpeg">
+    <input type="image" src="flower2.jpeg"><br />
+    <input type="reset" value="Reset">
+    <button id="btnClick">Submit</button>
+</body>
+
+</html>

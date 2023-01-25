@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Referencing</title>
+    <!-- Importing Jquery -->
+    <script src="./jquery-3.6.3.min.js"></script>
+    <script>
+        // Long syntax ready
+        $(document).ready(() => { // When dom's is fully load
+            $('#btnClick').click(() => { // Event onClick in button
+                $('#myPara').css("background-color", "pink"); // Add some css
+            });
+        });
+
+        // Short syntax ready
+        $(() => {
+            $('#btnClick').click(() => { // Event onClick in button
+                $('#myPara').css("background-color", "pink"); // Add some css
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <p id="myPara">First jQuery</p>
+    <button id="btnClick">Click Me!!!</button>
+</body>
+
+</html>

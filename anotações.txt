@@ -1,0 +1,55 @@
+----- $ -----
+
+E um encurtamento para palavra reservada Jquery
+Sintaxe: $(selector).action();
+
+----- ready() -----
+
+O Ready evento ocorre quando o Dom foi completamente carregado.
+Neste evento devemos colocar o resto do nosso código Jquery.
+Sintaxe alongada: $(document).ready(function)
+Sintaxe encurtada: $(function)
+
+----- click -----
+
+Ao clicar em um elemento podemos executar uma ação.
+$(select).click();
+
+----- Seletores -----
+
+$('*') // All selector
+$('p ol ul, ...) // Tagname selector
+
+----- Odd e Even -----
+
+Odd pega todos os odd nth-child elements.
+Even pega todos os even nth-child elements.
+
+----- Focus -----
+
+Adiciona uma ação quando o evento focus (clique mouse, tab) ocorre em um input.
+$(selector).focus()
+
+----- Blur -----
+
+Adiciona uma ação quando o elemente perde o focus.
+$(selector).blur()
+
+----- Selecionar elementos pelo atributo -----
+
+$([atributo]).action()
+// Todos os elementos que tem o atributo id
+$("[id]").css("color", "blue");
+// Todos os elementos que tem o atributo id com o valor firstDiv
+$("[id='firstDiv']").css("color", "purple");
+^= começa com
+$= termina com
+*= contem
+!=
+
+----- Position selectors -----
+
+:first, :last, even, odd.
+index equals: eq
+less than :lt
+greather than :gt

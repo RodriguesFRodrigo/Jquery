@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selectors</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnClick").click(function () {
+                // Todos os elementos que tem o atributo id e que inicia com o valor first
+                $("[id^=first]").css("color", "red");
+                // Todos os elementos que tem o atributo id e que termina com o valor th
+                $("[id$=th]").css("color", "red");
+                // Todos os elementos que contém a palavra first
+                $("[id*=first]").css("color", "red");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+        <p id="para-first-para" class="paras">First Paragraph. First Paragraph.</p>
+        <!--
+    <p id="pafirstra" class="paras">First Paragraph. First Paragraph.</p>
+    -->
+        <p id="second-para">Second Paragraph. Second Paragraph.</p>
+        <p id="third-para">Third Paragraph. Third Paragraph.</p>
+        <div id="firstDiv">First div</div>
+        <div id="divSecond" class="divs">Second div</div>
+        <div id="divFourth">Fourth div</div>
+        <div id="divFifth" class="divs">Fifth div</div><br />
+        <button id="btnClick">Click!!!</button>
+</body>
+
+</html>
