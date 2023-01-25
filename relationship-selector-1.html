@@ -45,11 +45,41 @@
     <script src="./jquery-3.6.3.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            // $('#btnClick').click(function () {
-            //     $('span:first-child').hide(2000);
-            // })
+            /* ----- Seleciona todos os primeiros span que são filhos de um elemento */
+            $('#btnClick').click(function () {
+                $('span:first-child').hide(1000);
+            })
+            // /* ----- Seleciona todos os últimos span que são filhos de um elemento */
             $('#btnClick').click(function () {
                 $('span:last-child').hide(2000);
+            })
+            // /* ----- Seleciona todos os span que é o segundo filho de um elemento de *cima para baixo* ----- */
+            $('#btnClick').click(function () {
+                $('span:nth-child(2)').hide(1000);
+            })
+            // /* ----- Seleciona todos os span que é o terceiro filho de um elemento de *cima para baixo* ----- */
+            $('#btnClick').click(function () {
+                $('p:nth-child(3)').hide(1000);
+            })
+            // /* ----- Seleciona todos os span que é o terceiro filho de um elemento de *baixo para cima* ----- */
+            $('#btnClick').click(function () {
+                $('p:nth-last-child(3)').hide(1000);
+            })
+            /* ----- Seleciona todos os primeiros elementos que são do tipo p e filhos de um elemento */
+            $('#btnClick').click(function () {
+                $('p:first-of-type').hide(1000);
+            })
+            /* ----- Seleciona todos os ultimos elementos que são do tipo p e filhos de um elemento */
+            $('#btnClick').click(function () {
+                $('p:last-of-type').hide(1000);
+            })
+            /* ----- Seleciona todos os segundos(n) elementos que são do tipo p e filhos de um elemento */
+            $('#btnClick').click(function () {
+                $('p:nth-of-type(2)').hide(1000);
+            })
+            /* ----- Seleciona todos os terceiros(n) elementos que são do tipo p e filhos de um elemento de *baixo para cima* */
+            $('#btnClick').click(function () {
+                $('p:nth-last-of-type(3)').hide(1000);
             })
         })
     </script>
@@ -60,6 +90,7 @@
         <p>Paragraph</p>
         <span>Span</span>
         <p>Paragraph</p>
+        <p>Paragraph</p>
     </div>
     <div id="sub" class="style">
         <span>Span</span>
@@ -68,6 +99,7 @@
         <div>
             <span>Span</span>
         </div>
+        <p>Paragraph</p>
         <!--
             <span>Span</span>
         -->
